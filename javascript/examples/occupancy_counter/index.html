@@ -9,9 +9,49 @@
 <body>
     <div style="text-align: center;">
         <h1>Occupancy Counter</h1>
-        <span id="counter" class="counter" >0</span>
+        <div style="margin: 20px;">
+            <span id="counter" class="counter">0</span>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <table>
+                <tr>
+                    <td>
+                        Name:
+                    </td>
+                    <td>
+                        <input id="nameInput" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mobile:
+                    </td>
+                    <td>
+                        <input id="mobileInput" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Count:
+                    </td>
+                    <td>
+                        <input id="countInput" type="number">
+                    </td>
+                </tr>
+            </table>
+        </div>
         <div>
-            <button id="inButton" >IN</button><button id="outButton">OUT</button>
+            <button id="inButton">IN</button>
+            <!-- <button id="outButton">OUT</button> -->
+        </div>
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <ul>
+                <li><span>satya (12) Mobile - 999999999</span><button id="outButton">OUT</button> </li>
+                <li><span>satya (12) Mobile - 999999999</span><button id="outButton">OUT</button> </li>
+                <li><span>satya (12) Mobile - 999999999</span><button id="outButton">OUT</button> </li>
+                <li><span>satya (12) Mobile - 999999999</span><button id="outButton">OUT</button> </li>
+            </ul>
         </div>
     </div>
 
