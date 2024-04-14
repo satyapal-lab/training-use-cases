@@ -57,7 +57,7 @@ class Club {
     }
 
     out(group) {
-        const index = this.#groups.findIndex((g) = g.id = group.id);
+        const index = this.#groups.findIndex((g) => g.id == group.id);
         const removedGroups = this.#groups.splice(index, 1);
         this.#counter -= removedGroups[0].count;
         this.render();
