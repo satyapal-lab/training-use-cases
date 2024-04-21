@@ -69,10 +69,28 @@ class Club {
         counterSpan.style.color = "red";
         counterSpan.innerText = this.#counter;
 
-        document.createElement("ul").appendChild()
+        const entriesDiv = document.getElementById("entriesDiv");
+        entriesDiv.removeChild(entriesDiv.firstChild);
+
+        const ulElement = document.createElement("ul");
+
         this.#groups.forEach((group) => {
-           
-        })
+            const liElement = document.createElement('li');
+            const spanElement = document.createElement("span");
+            spanElement.textContent = `${group.name} (${group.count}) mobile: ${group.mobile}`;
+
+            const outButton = document.createElement("button");
+            outButton.textContent = "Out";
+            outButton.addEventListener("click", () => {
+                this.out(group);
+            });
+
+            liElement.appendChild(spanElement);
+            liElement.appendChild(outButton);
+            ulElement.appendChild(liElement);
+        });
+
+        entriesDiv.appendChild(ulElement);
       
     }
 }
@@ -83,6 +101,12 @@ const nameInput = document.getElementById("nameInput");
 const mobileInput = document.getElementById("mobileInput");
 const countInput = document.getElementById("countInput");
 
+const clearForm  = () => {
+    nameInput.value = "";
+    mobileInput.value = "";
+    countInput.value = "";
+}
+
 let inButton = document.getElementById("inButton");
 inButton.addEventListener("click", () => {
     const name = nameInput.value;
@@ -90,17 +114,7 @@ inButton.addEventListener("click", () => {
     const count = parseInt(countInput.value);
     const group = new Group(name, mobile, count);
     club.in(group);
+    clearForm();
 });
-
-// let outButton = document.getElementById("outButton");
-// outButton.addEventListener("click", () => {
-//     if (counter > 0) {
-//         counter = counter - 1;
-//         refreshCounter();
-//     } else {
-//         alert("club is empty");
-//     }
-
-// });
 
 
