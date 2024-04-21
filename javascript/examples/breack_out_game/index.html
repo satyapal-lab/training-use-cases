@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Breakout Game</title>
+        <style>
+            canvas {
+                background-color: aliceblue;
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div>
+            <canvas id="canvas" width="960" height="640">
 
-<head>
-    <title>Break Out Game</title>
-    <style>
-        canvas {
-            background-color: aliceblue;
-        }
-    </style>
-</head>
-
-<body>
-    <div>
-        <canvas id="canvas" width="960" height="640"></canvas>
-    </div>
-</body>
-
-<script src="script.js">
-</script>
-
+            </canvas>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
+           <label id="idScore" style="font-size: large; padding: 10px; background-color: aqua; margin: 10px;"></label> <button id="startButton" style="width: 100px; height: 40px; background-color: blue; border-radius: 10px; ">Start</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
