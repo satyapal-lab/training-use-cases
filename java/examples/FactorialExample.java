@@ -34,7 +34,7 @@ class Math {
         int fact = 1;
 
         if (num < 0) {
-            return num;
+            throw new IllegalArgumentException("Negative value is not");
         }
 
         for (int i = 1; i <= num; i++) {
